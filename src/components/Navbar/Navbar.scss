@@ -19,16 +19,22 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: var(--secondary-color);
+  font-family: 'Montserrat', sans-serif;
 
-  img {
-    width: 100px;
-    height: 20px;
-
-    @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
-    }
+  span {
+    color: var(--black-color);
   }
+
+  // img {
+  //   width: 100px;
+  //   height: 20px;
+
+  //   @media screen and (min-width: 2000px) {
+  //     width: 180px;
+  //     height: 40px;
+  //   }
+  // }
 }
 
 .app__navbar-links {
