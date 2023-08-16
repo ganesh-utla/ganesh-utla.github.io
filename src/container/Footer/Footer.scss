@@ -60,6 +60,7 @@
 
 .app__footer-cards .app__footer-card:last-child {
   background-color: #f2f7fb;
+  // background-color: #dcebfd;
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
@@ -115,11 +116,11 @@
     margin: 2rem 0 0 0;
     font-family: var(--font-base);
 
-    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
 
     &:hover {
-      background-color: #2430af;
+      background-color: #1b2489;
     }
   }
 
