@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import { BsTwitter, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 import './Navbar.scss';
 
@@ -24,23 +24,31 @@ const Navbar = () => {
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
-        {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: 'easeOut' }}
-          >
-            <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
+        <div className={`sidebar ${toggle && "active" }`}>
+          {toggle && <HiX onClick={() => setToggle(false)} />}
+          <ul>
+            {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+              <li key={item}>
+                <a href={`#${item}`} onClick={() => setToggle(false)}>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+          
+          <div className='social-media-icons'>
+            <div onClick={() => window.open("https://twitter.com/ganesh_utla", "_blank")}>
+              <BsTwitter />
+            </div>
+            <div onClick={() => window.open("https://www.linkedin.com/in/ganesh-utla-888abc/", "_blank")}>
+              <BsLinkedin />
+            </div>
+            <div onClick={() => window.open("https://www.instagram.com/ganesh_utla/", "_blank")}>
+              <BsInstagram />
+            </div>
+          </div>
+
+        </div>
       </div>
     </nav>
   );
