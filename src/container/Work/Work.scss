@@ -147,10 +147,25 @@
 
   .app__work-tag {
     position: absolute;
-
     padding: 0.5rem 1rem;
     border-radius: 10px;
     background-color: #fff;
     top: -25px;
+  }
+
+  .app__work-techs {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .tech-tag {
+      color: #545454;
+      background-color: rgb(107 118 136 / 20%);
+      padding: 2px 10px;
+      border-radius: 6px;
+    }
   }
 }
