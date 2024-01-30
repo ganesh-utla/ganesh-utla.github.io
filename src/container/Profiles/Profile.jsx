@@ -29,7 +29,7 @@ const Profile = () => {
             className="app__profile-item"
             key={profile.title + index}
           >
-            <img src={urlFor(profile.imgUrl)} alt={profile.title} />
+            <img src={urlFor(profile.imgUrl)} alt={profile.title} onClick={() => window.open(profile.profile, "_blank")} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>{profile.title}</h2>
             <p className="p-text" style={{ marginTop: 10 }}>
                 {profile.description}

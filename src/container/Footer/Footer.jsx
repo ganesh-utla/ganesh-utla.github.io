@@ -44,10 +44,6 @@ const Footer = () => {
           <img src={images.email} alt="email" />
           <a href="mailto:ganeshutla888@gmail.com" className="p-text">ganeshutla888@gmail.com</a>
         </div>
-        {/* <div className="app__footer-card">
-          <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className="p-text">+1 (123) 456-7890</a>
-        </div> */}
       </div>
       {!isFormSubmitted ? (
         <div className="app__footer-form app__flex">
@@ -66,10 +62,12 @@ const Footer = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" onClick={handleSubmit} disabled={username==="" || email==="" || message===""}>
+            {!loading ? 'Send Message' : 'Sending...'}
+          </button>
         </div>
       ) : (
-        <div>
+        <div style={{marginTop: 20}}>
           <h3 className="head-text">
             Thank you for getting in touch!
           </h3>

@@ -11,14 +11,11 @@ const About = () => {
 
       <div className='about_info'>
         <p className='p-text'>
-          Hello there! I'm <span>Ganesh Utla</span>, a passionate fourth-year B.Tech student specializing in Artificial Intelligence 
+          Hello there! I'm <span>Ganesh Utla</span>, a passionate final year B.Tech student specializing in Artificial Intelligence 
           and Data Science at Thakur College of Engineering and Technology, Mumbai, India. 
           
           <br /><br />
-          As a software developer, I have an insatiable curiosity and a flair for crafting solutions that make an impact. 
-          My journey is fueled by a strong belief in the power of teamwork and the joy of collaborative learning. 
-          I'm always excited to embrace new challenges and dive into the unconventional. Exploring the unknown is my 
-          forte, and sharing my discoveries brings me immense satisfaction. 
+          I'm a curious software engineer who loves building things that matter. I believe teamwork and learning together are key to success. I'm always up for new challenges, even the weird ones! I code in different languages and want to learn even more. I would love to join hackathons for the amazing experience. In my free time, I freelance as a full-stack web developer. Right now, I'm learning React Native to build Android apps.
           
           <br /><br />
           Join me in this dynamic journey of learning, creating, and making a mark together!
