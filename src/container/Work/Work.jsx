@@ -97,7 +97,7 @@ const Work = () => {
               <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
               <div className="app__work-techs">
-                {work.technologies.map((tech, index) => (
+                {work.technologies && work.technologies.map((tech, index) => (
                   <p key={index} className='p-text tech-tag'>
                     {tech}
                   </p>
