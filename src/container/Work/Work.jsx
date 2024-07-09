@@ -9,7 +9,7 @@ import './Work.scss';
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Recent');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const Work = () => {
       <h2 className="head-text">Some Recent <span>Projects</span></h2>
 
       <div className="app__work-filter">
-        {['Personal', 'Hackathon', 'Freelance', 'All'].map((item, index) => (
+        {['Recent', 'Personal', 'Hackathon', 'Freelance', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
