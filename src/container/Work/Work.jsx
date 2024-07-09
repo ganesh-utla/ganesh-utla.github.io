@@ -17,7 +17,7 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      setFilterWork(data);
+      setFilterWork(data.filter((work) => work.tags.includes('Recent')));
     });
   }, []);
 
