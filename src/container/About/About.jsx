@@ -11,11 +11,10 @@ const About = () => {
 
       <div className='about_info'>
         <p className='p-text'>
-          Hello there! I'm <span>Ganesh Utla</span>, a passionate final year B.Tech student specializing in Artificial Intelligence 
-          and Data Science at Thakur College of Engineering and Technology, Mumbai, India. 
-          
+          Hello there! I'm <span>Ganesh Utla</span>, a Product Engineer-I at Juspay. I graduated with a Bachelor of Technology specializing in Artificial Intelligence and Data Science from Thakur College of Engineering and Technology in Mumbai, India.
+
           <br /><br />
-          I'm a curious software engineer who loves building things that matter. I believe teamwork and learning together are key to success. I'm always up for new challenges, even the weird ones! I code in different languages and want to learn even more. I would love to join hackathons for the amazing experience. In my free time, I freelance as a full-stack web developer. Right now, I'm learning React Native to build Android apps.
+          I'm a curious software engineer who loves building things that matter. I believe teamwork and learning together are key to success. I'm always up for new challenges, even the weird ones! I code in different languages and want to learn even more. I would love to join hackathons for the amazing experience.
           
           <br /><br />
           Join me in this dynamic journey of learning, creating, and making a mark together!
