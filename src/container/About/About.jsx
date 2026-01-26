@@ -21,7 +21,7 @@ const About = () => {
         </p>
 
         <div className='about_btns'>
-          <button type="button" onClick={() => window.open("/Ganesh_Utla_Resume.pdf", "_blank")}>
+          <button type="button" onClick={() => window.open("/ganesh_utla_resume.pdf", "_blank")}>
             Checkout Resume
           </button>
           <button type="button" onClick={() => window.open("https://linkedin.com/in/ganesh-utla-888abc", "_blank")}>
