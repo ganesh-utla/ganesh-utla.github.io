@@ -32,7 +32,7 @@ jobs:
           REACT_APP_SANITY_PROJECT_ID: ${{ secrets.REACT_APP_SANITY_PROJECT_ID }}
           REACT_APP_SANITY_TOKEN: ${{ secrets.REACT_APP_SANITY_TOKEN }}
 
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-artifact@v4
         with:
           path: build
 
