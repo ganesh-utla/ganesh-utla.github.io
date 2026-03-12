@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import MobileNav from '@/components/MobileNav'
 import ProjectCard from '@/components/ProjectCard'
 import { getProfile, getProjects } from '@/lib/supabase'
 
@@ -9,8 +10,9 @@ export default async function ProjectsPage() {
   return (
     <>
       <Header profile={profile} />
+      <MobileNav />
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Projects</h1>
           <p className="text-lg text-gray-600 mb-12">
@@ -31,7 +33,7 @@ export default async function ProjectsPage() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-gray-900 text-gray-300 py-12 mb-16 sm:mb-0">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; {new Date().getFullYear()} {profile?.name || 'Developer'}. All rights reserved.</p>
         </div>

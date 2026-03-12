@@ -16,7 +16,7 @@ export default function Header({ profile }: HeaderProps) {
           {profile?.name || 'Portfolio'}
         </Link>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 hidden md:flex">
           <Link href="/projects" className="text-gray-600 hover:text-gray-900 transition">
             Projects
           </Link>

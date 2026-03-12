@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import MobileNav from '@/components/MobileNav'
 import ProjectCard from '@/components/ProjectCard'
 import Link from 'next/link'
 import { getProfile, getFeaturedProjects, getSkills } from '@/lib/supabase'
@@ -12,11 +13,23 @@ export default async function Home() {
   return (
     <>
       <Header profile={profile} />
+      <MobileNav />
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pb-20 md:pb-0">
         {/* Hero Section */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-start">
+            {/* Mobile: Show image first on smaller devices */}
+            {profile?.profile_image && (
+              <div className="flex justify-center w-full md:hidden mb-4">
+                <img
+                  src="/profile_picture.png"
+                  alt={profile.name}
+                  className="w-40 h-40 rounded-full object-cover shadow-2xl"
+                />
+              </div>
+            )}
+
             <div className="flex-1">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 {profile?.name || 'Developer'}
@@ -35,22 +48,21 @@ export default async function Home() {
                 >
                   Get In Touch
                 </Link>
-                {profile?.resume_url && (
-                  <a
-                    href={profile.resume_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:border-gray-400 transition font-semibold inline-flex items-center gap-2"
-                  >
-                    <Download size={18} />
-                    Download Resume
-                  </a>
-                )}
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:border-gray-400 transition font-semibold inline-flex items-center gap-2"
+                >
+                  <Download size={18} />
+                  Download Resume
+                </a>
               </div>
             </div>
 
+            {/* Desktop: Show image on the right */}
             {profile?.profile_image && (
-              <div className="flex-shrink-0">
+              <div className="hidden md:flex flex-shrink-0">
                 <img
                   src="/profile_picture.png"
                   alt={profile.name}
@@ -85,7 +97,7 @@ export default async function Home() {
 
         {/* Skills Section */}
         {skills.length > 0 && (
-          <section className="py-20">
+          <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-12">Skills</h2>
 
@@ -100,13 +112,16 @@ export default async function Home() {
                   {} as Record<string, typeof skills>
                 )
               ).map(([category, categorySkills]) => (
-                <div key={category} className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{category}</h3>
+                <div key={category} className="mb-10 bg-white p-6 rounded-2xl shadow-md border border-blue-100">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <span className="inline-block w-1 h-6 bg-blue-600 rounded-full mr-3"></span>
+                    {category}
+                  </h3>
                   <div className="flex flex-wrap gap-3">
                     {categorySkills.map((skill) => (
                       <span
                         key={skill.id}
-                        className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium"
+                        className="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 cursor-default"
                       >
                         {skill.name}
                       </span>
@@ -136,7 +151,7 @@ export default async function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-gray-900 text-gray-300 py-12 mb-16 sm:mb-0">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; {new Date().getFullYear()} {profile?.name || 'Developer'}. All rights reserved.</p>
         </div>
