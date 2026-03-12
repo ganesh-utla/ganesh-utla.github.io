@@ -1,0 +1,41 @@
+import Header from '@/components/Header'
+import ProjectCard from '@/components/ProjectCard'
+import { getProfile, getProjects } from '@/lib/supabase'
+
+export default async function ProjectsPage() {
+  const profile = await getProfile()
+  const projects = await getProjects()
+
+  return (
+    <>
+      <Header profile={profile} />
+
+      <main className="min-h-screen bg-gray-50">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Projects</h1>
+          <p className="text-lg text-gray-600 mb-12">
+            A collection of projects I&apos;ve built and contributed to.
+          </p>
+
+          {projects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {projects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-500">No projects yet. Check back soon!</p>
+            </div>
+          )}
+        </section>
+      </main>
+
+      <footer className="bg-gray-900 text-gray-300 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>&copy; {new Date().getFullYear()} {profile?.name || 'Developer'}. All rights reserved.</p>
+        </div>
+      </footer>
+    </>
+  )
+}
