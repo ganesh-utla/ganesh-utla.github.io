@@ -2,13 +2,14 @@ import Header from '@/components/Header'
 import MobileNav from '@/components/MobileNav'
 import ProjectCard from '@/components/ProjectCard'
 import Link from 'next/link'
-import { getProfile, getFeaturedProjects, getSkills } from '@/lib/data'
-import { Download } from 'lucide-react'
+import { getProfile, getFeaturedProjects, getSkills, getCodingProfiles } from '@/lib/data'
+import { Download, ExternalLink } from 'lucide-react'
 
-export default async function Home() {
-  const profile = await getProfile()
-  const featuredProjects = await getFeaturedProjects()
-  const skills = await getSkills()
+export default function Home() {
+  const profile = getProfile()
+  const featuredProjects = getFeaturedProjects()
+  const skills = getSkills()
+  const codingProfiles = getCodingProfiles()
 
   return (
     <>
@@ -72,6 +73,40 @@ export default async function Home() {
             )}
           </div>
         </section>
+
+        {/* Coding Profiles */}
+        {codingProfiles.length > 0 && (
+          <section className="py-16 bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Coding Profiles</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {codingProfiles.map((profile) => (
+                  <a
+                    key={profile.id}
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 group"
+                  >
+                    <div className="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                      <img
+                        src={profile.image}
+                        alt={profile.name}
+                        className="w-16 h-16 object-cover rounded-md"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        {profile.name}
+                      </h3>
+                    </div>
+                    <ExternalLink size={16} className="text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (

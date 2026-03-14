@@ -2,9 +2,9 @@ import Header from '@/components/Header'
 import MobileNav from '@/components/MobileNav'
 import { getProfile, getExperience } from '@/lib/data'
 
-export default async function ExperiencePage() {
-  const profile = await getProfile()
-  const experience = await getExperience()
+export default function ExperiencePage() {
+  const profile = getProfile()
+  const experience = getExperience()
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -45,9 +45,42 @@ export default async function ExperiencePage() {
                   {/* Content */}
                   <div className="bg-white dark:bg-gray-800 rounded-2xl border-2 border-blue-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300 p-4 md:p-6">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-0 mb-4">
-                      <div>
-                        <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">{exp.role}</h3>
-                        <p className="text-blue-600 dark:text-blue-400 font-semibold text-base md:text-lg">{exp.company}</p>
+                      <div className="flex items-center gap-3">
+                        {exp.image && exp.company_url ? (
+                          <a
+                            href={exp.company_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="shrink-0"
+                          >
+                            <img
+                              src={exp.image}
+                              alt={`${exp.company} logo`}
+                              className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-lg bg-white p-1 border border-gray-200 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500 transition-colors cursor-pointer"
+                            />
+                          </a>
+                        ) : exp.image ? (
+                          <img
+                            src={exp.image}
+                            alt={`${exp.company} logo`}
+                            className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-lg bg-white p-1 border border-gray-200 dark:border-gray-600"
+                          />
+                        ) : null}
+                        <div>
+                          <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">{exp.role}</h3>
+                          {exp.company_url ? (
+                            <a
+                              href={exp.company_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 dark:text-blue-400 font-semibold text-base md:text-lg hover:underline cursor-pointer"
+                            >
+                              {exp.company}
+                            </a>
+                          ) : (
+                            <p className="text-blue-600 dark:text-blue-400 font-semibold text-base md:text-lg">{exp.company}</p>
+                          )}
+                        </div>
                       </div>
                       <div className="text-left md:text-right text-sm text-gray-500 dark:text-gray-400 flex flex-row">
                         <div className="bg-blue-50 dark:bg-gray-700 rounded-lg flex flex-row gap-2 px-3 py-2">

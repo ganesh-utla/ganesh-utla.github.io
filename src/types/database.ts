@@ -28,11 +28,13 @@ export interface Project {
 export interface Experience {
   id: string
   company: string
+  company_url: string | null
   role: string
   start_date: string
   end_date: string | null
   description: string[]
   tech_stack: string[] | null
+  image: string | null
   order_index: number
   created_at: string
 }
@@ -52,4 +54,12 @@ export interface ContactMessage {
   email: string
   message: string
   created_at?: string
+}
+
+export interface CodingProfile {
+  id: string
+  name: string
+  url: string
+  image: string
+  order_index: number
 }

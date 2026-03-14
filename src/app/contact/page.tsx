@@ -3,8 +3,8 @@ import MobileNav from '@/components/MobileNav'
 import ContactForm from '@/components/ContactForm'
 import { getProfile } from '@/lib/data'
 
-export default async function ContactPage() {
-  const profile = await getProfile()
+export default function ContactPage() {
+  const profile = getProfile()
 
   return (
     <>

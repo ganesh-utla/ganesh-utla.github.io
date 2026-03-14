@@ -3,9 +3,9 @@ import MobileNav from '@/components/MobileNav'
 import ProjectCard from '@/components/ProjectCard'
 import { getProfile, getProjects } from '@/lib/data'
 
-export default async function ProjectsPage() {
-  const profile = await getProfile()
-  const projects = await getProjects()
+export default function ProjectsPage() {
+  const profile = getProfile()
+  const projects = getProjects()
 
   return (
     <>

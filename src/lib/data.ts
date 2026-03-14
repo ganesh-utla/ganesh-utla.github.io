@@ -1,69 +1,44 @@
 import data from '@/data/data.json'
-import { Profile, Project, Experience, Skill, ContactMessage } from '@/types/database'
+import { Profile, Project, Experience, Skill, ContactMessage, CodingProfile } from '@/types/database'
 
 // Profile
-export async function getProfile(): Promise<Profile | null> {
-  try {
-    return data.profile || null
-  } catch (error) {
-    console.error('Error fetching profile:', error)
-    return null
-  }
+export function getProfile(): Profile | null {
+  return data.profile || null
 }
 
 // Projects
-export async function getProjects(): Promise<Project[]> {
-  try {
-    return data.projects || []
-  } catch (error) {
-    console.error('Error fetching projects:', error)
-    return []
-  }
+export function getProjects(): Project[] {
+  return data.projects || []
 }
 
-export async function getFeaturedProjects(): Promise<Project[]> {
-  try {
-    return data.projects
-      .filter((project) => project.featured)
-      .sort((a, b) => a.order_index - b.order_index)
-      .slice(0, 3)
-  } catch (error) {
-    console.error('Error fetching featured projects:', error)
-    return []
-  }
+export function getFeaturedProjects(): Project[] {
+  return (data.projects || [])
+    .filter((project) => project.featured)
+    .sort((a, b) => a.order_index - b.order_index)
+    .slice(0, 3)
 }
 
 // Experience
-export async function getExperience(): Promise<Experience[]> {
-  try {
-    return (data.experience || []).sort((a, b) => a.order_index - b.order_index)
-  } catch (error) {
-    console.error('Error fetching experience:', error)
-    return []
-  }
+export function getExperience(): Experience[] {
+  return (data.experience || []).sort((a, b) => a.order_index - b.order_index)
 }
 
 // Skills
-export async function getSkills(): Promise<Skill[]> {
-  try {
-    return (data.skills || []).sort((a, b) => a.order_index - b.order_index)
-  } catch (error) {
-    console.error('Error fetching skills:', error)
-    return []
-  }
+export function getSkills(): Skill[] {
+  return (data.skills || []).sort((a, b) => a.order_index - b.order_index)
 }
 
 // Contact
-export async function submitContactMessage(
+export function submitContactMessage(
   message: ContactMessage
-): Promise<boolean> {
-  try {
-    // In a static JSON setup, we can't actually store messages
-    // This function logs the message and returns true to simulate success
-    console.log('Contact message submitted:', message)
-    return true
-  } catch (error) {
-    console.error('Error submitting contact message:', error)
-    return false
-  }
+): boolean {
+  // In a static JSON setup, we can't actually store messages
+  // This function logs the message and returns true to simulate success
+  console.log('Contact message submitted:', message)
+  return true
+}
+
+// Coding Profiles
+export function getCodingProfiles(): CodingProfile[] {
+  return (data.coding_profiles || []).sort((a, b) => a.order_index - b.order_index)
 }

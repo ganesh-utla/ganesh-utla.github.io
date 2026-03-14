@@ -3,7 +3,7 @@
     "id": "a8427a94-aa86-4af0-8f03-c165e9b3f842",
     "name": "Ganesh Utla",
     "title": "Product Engineer - I",
-    "bio": "Backend-focused Product Engineer with experience building and optimizing scalable fintech systems. Hands-on experience with REST APIs, database optimization, distributed workflows, and end-to-end ownership of production services in high-traffic environments.",
+    "bio": "Backend-focused Product Engineer with experience building and optimizing scalable fintech systems. Hands-on experience with REST APIs, database optimization, distributed workflows, and end-to-end ownership of production services in high-traffic environments. Currently, exploring System Design and LLM-powered applications.",
     "email": "ganeshutla888@gmail.com",
     "github": "https://github.com/ganesh-utla/",
     "linkedin": "https://www.linkedin.com/in/ganesh-utla/",
@@ -96,6 +96,7 @@
     {
       "id": "40ab4c60-b063-411a-bedf-3e3c25393e9d",
       "company": "Freelancing",
+      "company_url": "https://kumail.shop",
       "role": "Full Stack Developer",
       "start_date": "2023-02-01",
       "end_date": "2023-05-01",
@@ -108,12 +109,14 @@
         "Node.js",
         "MongoDB"
       ],
+      "image": "/experience/freelancing.png",
       "order_index": 3,
       "created_at": "2026-03-12 18:07:43.927972+00"
     },
     {
       "id": "21d42ec2-c212-4f70-90cc-1435b5c641f4",
       "company": "Juspay Technologies",
+      "company_url": "https://juspay.io",
       "role": "Product Engineer - I",
       "start_date": "2024-07-22",
       "end_date": null,
@@ -127,12 +130,14 @@
       "tech_stack": [
         "Haskell"
       ],
+      "image": "/experience/juspay.png",
       "order_index": 1,
       "created_at": "2026-03-12 18:09:44.774366+00"
     },
     {
       "id": "78465178-02f0-49ce-91a5-b93b2175ab40",
       "company": "ARCON Tech Solutions",
+      "company_url": "https://www.arconnet.com",
       "role": "Software Developer Intern",
       "start_date": "2023-06-01",
       "end_date": "2023-08-01",
@@ -143,6 +148,7 @@
       "tech_stack": [
         "C#"
       ],
+      "image": "/experience/arcon.png",
       "order_index": 2,
       "created_at": "2026-03-12 18:29:32.572632+00"
     }
@@ -243,6 +249,29 @@
       "level": null,
       "order_index": 3,
       "created_at": "2026-03-12 18:27:37.550698+00"
+    }
+  ],
+  "coding_profiles": [
+    {
+      "id": "1",
+      "name": "LeetCode",
+      "url": "https://leetcode.com/u/ganesh-utla/",
+      "image": "/coding/leetcode.png",
+      "order_index": 1
+    },
+    {
+      "id": "2",
+      "name": "GeeksforGeeks",
+      "url": "https://auth.geeksforgeeks.org/user/ganesh_utla/",
+      "image": "/coding/geeksforgeeks.png",
+      "order_index": 2
+    },
+    {
+      "id": "3",
+      "name": "CodeChef",
+      "url": "https://www.codechef.com/users/ganesh_utla/",
+      "image": "/coding/codechef.png",
+      "order_index": 3
     }
   ]
 }

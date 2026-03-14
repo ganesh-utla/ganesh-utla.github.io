@@ -10,11 +10,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <div className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800 flex flex-col h-full">
       {project.image_url && (
         <div className="relative w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600">
+          {/* Cover Image with reduced brightness */}
           <img
             src={project.image_url}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover brightness-[0.35]"
           />
+          {/* Square Image Overlay - Centered */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-26 h-26 rounded-2xl bg-white dark:bg-white shadow-2xl border-4 border-gray-300 dark:border-gray-600 overflow-hidden flex items-center justify-center">
+              <img
+                src={project.image_url}
+                alt={`${project.title} logo`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       )}
 
