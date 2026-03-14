@@ -42,6 +42,7 @@ export interface Experience {
 export interface Skill {
   id: string
   name: string
+  image: string
   category: string
   level: 'beginner' | 'intermediate' | 'advanced' | 'expert'
   order_index: number

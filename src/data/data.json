@@ -158,6 +158,7 @@
       "id": "cf8fbb69-f169-466f-a46a-339a77893657",
       "name": "Haskell",
       "category": "Backend Development",
+      "image": "/skills/haskell.png",
       "level": null,
       "order_index": 1,
       "created_at": "2026-03-12 18:24:28.654054+00"
@@ -166,6 +167,7 @@
       "id": "cb38e08f-2771-4cba-b1e8-b1a10b8cb458",
       "name": "Python",
       "category": "Backend Development",
+      "image": "/skills/python.png",
       "level": null,
       "order_index": 2,
       "created_at": "2026-03-12 18:24:50.944867+00"
@@ -174,6 +176,7 @@
       "id": "55bf4e23-8f4b-4b50-a2f7-2673c68024fa",
       "name": "C++",
       "category": "Backend Development",
+      "image": "/skills/cpp.png",
       "level": null,
       "order_index": 3,
       "created_at": "2026-03-12 18:25:05.587439+00"
@@ -182,6 +185,7 @@
       "id": "9d420153-0fc4-41d5-9c10-d2f1e87f081a",
       "name": "Node.js",
       "category": "Backend Development",
+      "image": "/skills/nodejs.png",
       "level": null,
       "order_index": 4,
       "created_at": "2026-03-12 18:25:16.209321+00"
@@ -190,6 +194,7 @@
       "id": "3379cbad-bc8e-47c2-b9cb-2816b2118974",
       "name": "HTML",
       "category": "Web Development",
+      "image": "/skills/html.png",
       "level": null,
       "order_index": 1,
       "created_at": "2026-03-12 18:25:37.347057+00"
@@ -198,6 +203,7 @@
       "id": "b0e25c28-a0fd-4add-b341-649b67cbdec4",
       "name": "React.js",
       "category": "Web Development",
+      "image": "/skills/react.png",
       "level": null,
       "order_index": 2,
       "created_at": "2026-03-12 18:25:51.015303+00"
@@ -206,6 +212,7 @@
       "id": "40b03f49-4be6-4495-85a1-47d782fccc9f",
       "name": "Next.js",
       "category": "Web Development",
+      "image": "/skills/nextjs.png",
       "level": null,
       "order_index": 3,
       "created_at": "2026-03-12 18:26:00.634042+00"
@@ -214,6 +221,16 @@
       "id": "225f98c3-2911-4ba0-903b-b8b02d1c3f05",
       "name": "Typescript",
       "category": "Web Development",
+      "image": "/skills/typescript.png",
+      "level": null,
+      "order_index": 5,
+      "created_at": "2026-03-12 18:26:27.918147+00"
+    },
+    {
+      "id": "225f98c3-2911-4ba0-903b-b8b02d1c3g05",
+      "name": "Javascript",
+      "category": "Web Development",
+      "image": "/skills/javascript.png",
       "level": null,
       "order_index": 4,
       "created_at": "2026-03-12 18:26:27.918147+00"
@@ -222,32 +239,27 @@
       "id": "2de5e996-3552-4e3f-9192-b3f7638986f9",
       "name": "React Native",
       "category": "Android Development",
+      "image": "/skills/react-native.png",
       "level": null,
       "order_index": 1,
       "created_at": "2026-03-12 18:26:51.015683+00"
     },
     {
-      "id": "541b0f17-28a8-4335-8d5d-6c6c3c7d98de",
-      "name": "SQL",
-      "category": "Database",
-      "level": null,
-      "order_index": 1,
-      "created_at": "2026-03-12 18:27:09.636806+00"
-    },
-    {
       "id": "814274c3-b061-4f9b-9144-165c878de1ec",
       "name": "PostgresDB",
       "category": "Database",
+      "image": "/skills/postgres.png",
       "level": null,
-      "order_index": 2,
+      "order_index": 1,
       "created_at": "2026-03-12 18:27:26.016273+00"
     },
     {
       "id": "c030a0a9-06ed-43e6-9e08-ed5a25f1b963",
       "name": "MongoDB",
       "category": "Database",
+      "image": "/skills/mongodb.png",
       "level": null,
-      "order_index": 3,
+      "order_index": 2,
       "created_at": "2026-03-12 18:27:37.550698+00"
     }
   ],

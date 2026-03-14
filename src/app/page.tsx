@@ -148,18 +148,27 @@ export default function Home() {
                 )
               ).map(([category, categorySkills]) => (
                 <div key={category} className="mb-10 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-blue-100 dark:border-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
                     <span className="inline-block w-1 h-6 bg-blue-600 rounded-full mr-3"></span>
                     {category}
                   </h3>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-6">
                     {categorySkills.map((skill) => (
-                      <span
+                      <div
                         key={skill.id}
-                        className="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 cursor-default"
+                        className="flex flex-col items-center gap-2 group"
                       >
-                        {skill.name}
-                      </span>
+                        <div className="w-16 h-16 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all duration-300 border-2 border-gray-200 dark:border-gray-600">
+                          <img
+                            src={skill.image}
+                            alt={skill.name}
+                            className="w-10 h-10 object-contain rounded-md"
+                          />
+                        </div>
+                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center">
+                          {skill.name}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>
