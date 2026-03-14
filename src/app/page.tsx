@@ -2,7 +2,7 @@ import Header from '@/components/Header'
 import MobileNav from '@/components/MobileNav'
 import ProjectCard from '@/components/ProjectCard'
 import Link from 'next/link'
-import { getProfile, getFeaturedProjects, getSkills } from '@/lib/supabase'
+import { getProfile, getFeaturedProjects, getSkills } from '@/lib/data'
 import { Download } from 'lucide-react'
 
 export default async function Home() {
@@ -15,7 +15,7 @@ export default async function Home() {
       <Header profile={profile} />
       <MobileNav />
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pb-20 md:pb-0">
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 pb-20 md:pb-0">
         {/* Hero Section */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-start">
@@ -31,13 +31,13 @@ export default async function Home() {
             )}
 
             <div className="flex-1">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 {profile?.name || 'Developer'}
               </h1>
-              <p className="text-xl text-blue-600 font-semibold mb-4">
+              <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold mb-4">
                 {profile?.title || 'Full Stack Developer'}
               </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 {profile?.bio || 'Welcome to my portfolio'}
               </p>
 
@@ -52,7 +52,7 @@ export default async function Home() {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 border-2 border-gray-300 text-gray-900 rounded-lg hover:border-gray-400 transition font-semibold inline-flex items-center gap-2"
+                  className="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:border-gray-400 dark:hover:border-gray-500 transition font-semibold inline-flex items-center gap-2"
                 >
                   <Download size={18} />
                   Download Resume
@@ -75,9 +75,9 @@ export default async function Home() {
 
         {/* Featured Projects */}
         {featuredProjects.length > 0 && (
-          <section className="bg-white py-20">
+          <section className="bg-white dark:bg-gray-900 py-20">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12">Featured Projects</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Featured Projects</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {featuredProjects.map((project) => (
                   <ProjectCard key={project.id} project={project} />
@@ -86,7 +86,7 @@ export default async function Home() {
               <div className="text-center">
                 <Link
                   href="/projects"
-                  className="inline-block px-6 py-3 text-blue-600 hover:text-blue-700 font-semibold"
+                  className="inline-block px-6 py-3 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold"
                 >
                   View All Projects →
                 </Link>
@@ -97,9 +97,9 @@ export default async function Home() {
 
         {/* Skills Section */}
         {skills.length > 0 && (
-          <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-12">Skills</h2>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Skills</h2>
 
               {/* Group skills by category */}
               {Object.entries(
@@ -112,8 +112,8 @@ export default async function Home() {
                   {} as Record<string, typeof skills>
                 )
               ).map(([category, categorySkills]) => (
-                <div key={category} className="mb-10 bg-white p-6 rounded-2xl shadow-md border border-blue-100">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <div key={category} className="mb-10 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-blue-100 dark:border-gray-700">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
                     <span className="inline-block w-1 h-6 bg-blue-600 rounded-full mr-3"></span>
                     {category}
                   </h3>
@@ -151,7 +151,7 @@ export default async function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12 mb-16 sm:mb-0">
+      <footer className="bg-gray-900 dark:bg-gray-950 text-gray-300 py-12 mb-16 sm:mb-0">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>&copy; {new Date().getFullYear()} {profile?.name || 'Developer'}. All rights reserved.</p>
         </div>

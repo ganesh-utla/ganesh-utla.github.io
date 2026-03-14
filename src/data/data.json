@@ -1,0 +1,248 @@
+{
+  "profile": {
+    "id": "a8427a94-aa86-4af0-8f03-c165e9b3f842",
+    "name": "Ganesh Utla",
+    "title": "Product Engineer - I",
+    "bio": "Backend-focused Product Engineer with experience building and optimizing scalable fintech systems. Hands-on experience with REST APIs, database optimization, distributed workflows, and end-to-end ownership of production services in high-traffic environments.",
+    "email": "ganeshutla888@gmail.com",
+    "github": "https://github.com/ganesh-utla/",
+    "linkedin": "https://www.linkedin.com/in/ganesh-utla/",
+    "twitter": null,
+    "resume_url": "https://drive.google.com/file/d/1KsdGklGyAVa6R7u1PQ4RoCq2jS1fxZOR/view",
+    "profile_image": "https://raw.githubusercontent.com/kunalagra/SumUp/refs/heads/main/stm-app/public/stm-logo.png",
+    "updated_at": "2026-03-12 18:01:43.814976+00"
+  },
+  "projects": [
+    {
+      "id": "737928c3-9aaa-44d0-929e-4fac694c38a9",
+      "title": "UniMoney",
+      "description": [
+        "Developed a cross-platform mobile application focused on automated personal finance management as part of the B-Tech Final Year Project.",
+        "Ranked 1st among 70+ teams in the Mind's Eye Competition for innovation and overall product execution.",
+        "Implemented the front-end of the entire application using React Native. Features include automated transaction details extraction from SMS text, Historical statements & Analytics, Gamification elements, Budgeting, CRUD Operations for Transactions, bank accounts, and bill reminders."
+      ],
+      "tech_stack": [
+        "React Native",
+        "Node.js",
+        "MongoDB"
+      ],
+      "github_url": "https://github.com/kunalagra/UniMoney",
+      "live_url": null,
+      "image_url": "https://raw.githubusercontent.com/kunalagra/UniMoney/refs/heads/main/assets/images/Logo_1.png",
+      "featured": true,
+      "order_index": 1,
+      "created_at": "2026-03-12 18:13:47.72603+00"
+    },
+    {
+      "id": "d8988fd4-2947-4b7a-bed6-81408199bb4d",
+      "title": "Medicall",
+      "description": [
+        "Built a comprehensive web application that connects patients with suitable doctors for diagnostics under Solving for India Hackathon'23 hosted by Google, AMD & GFG and secured a spot in regionals.",
+        "Worked on front-end of the application using ReactJS. Features include appointment scheduling, live video consultations, WhatsApp & email integration, disease prediction, chatbot assistance, and e-pharmacy."
+      ],
+      "tech_stack": [
+        "React.js",
+        "Flask",
+        "MongoDB"
+      ],
+      "github_url": "https://github.com/kunalagra/MediCall",
+      "live_url": "https://gfg-sfi.onrender.com/",
+      "image_url": "https://raw.githubusercontent.com/kunalagra/MediCall/refs/heads/main/medicall/public/logo512.png",
+      "featured": true,
+      "order_index": 3,
+      "created_at": "2026-03-12 18:17:38.662742+00"
+    },
+    {
+      "id": "256a215d-bc34-465f-9943-d145405b8564",
+      "title": "SumUp",
+      "description": [
+        "Developed a web application that simplifies and streamlines summarizing team meetings in just 4-5 minutes under Mastek's Project Deep Blue Hackathon, securing a spot in the Semifinals.",
+        "Application supports various file formats such as text, audio, and video. Developed and integrated a Chrome extension with Google Meet to provide live captioning, cloud storage, and highlighter."
+      ],
+      "tech_stack": [
+        "React.js",
+        "Django",
+        "MongoDB"
+      ],
+      "github_url": "https://github.com/kunalagra/SumUp",
+      "live_url": "https://sumup-ywt9.onrender.com/",
+      "image_url": "https://raw.githubusercontent.com/kunalagra/SumUp/refs/heads/main/stm-app/public/stm-logo.png",
+      "featured": false,
+      "order_index": 4,
+      "created_at": "2026-03-12 18:19:25.530212+00"
+    },
+    {
+      "id": "d76037a6-bd63-4aef-9795-98860b1a97c1",
+      "title": "Codegamy",
+      "description": [
+        "Implemented front-end of a comprehensive platform for coding & interviews with a focus on peer learning.",
+        "Developed various features including peer learning using cohort models based on ratings derived using feedback loops for interview preparation.",
+        "Other key features include a code runner using JDoodle API, a live interview with Jitsi, a collaborative code editor using SocketIO, learning modules, and user dashboard & analytics."
+      ],
+      "tech_stack": [
+        "Next.js",
+        "Node.js",
+        "MongoDB"
+      ],
+      "github_url": "https://github.com/kunalagra/codegamy",
+      "live_url": "https://codegamy.vercel.app/",
+      "image_url": "https://raw.githubusercontent.com/kunalagra/codegamy/refs/heads/main/public/logo.png",
+      "featured": true,
+      "order_index": 2,
+      "created_at": "2026-03-12 18:15:56.622115+00"
+    }
+  ],
+  "experience": [
+    {
+      "id": "40ab4c60-b063-411a-bedf-3e3c25393e9d",
+      "company": "Freelancing",
+      "role": "Full Stack Developer",
+      "start_date": "2023-02-01",
+      "end_date": "2023-05-01",
+      "description": [
+        "Designed, developed, and deployed a production-grade e-commerce platform managing a catalog of 6,500+ products, along with a custom-built Admin Panel.",
+        "Implemented backend APIs, inventory management, and order processing with real-time analytics, achieving low-millisecond response times for read-heavy endpoints."
+      ],
+      "tech_stack": [
+        "Next.js",
+        "Node.js",
+        "MongoDB"
+      ],
+      "order_index": 3,
+      "created_at": "2026-03-12 18:07:43.927972+00"
+    },
+    {
+      "id": "21d42ec2-c212-4f70-90cc-1435b5c641f4",
+      "company": "Juspay Technologies",
+      "role": "Product Engineer - I",
+      "start_date": "2024-07-22",
+      "end_date": null,
+      "description": [
+        "Contributed to the Loan Marketplace platform, building backend services and REST APIs that enable seamless interaction between merchants and multiple lenders through standardized workflows.",
+        "Played a key role in developing the Credit Line Management system and Lender Gateway integrations, contributing to a revenue growth of nearly 35%.",
+        "Improved system performance and reliability by optimizing PostgreSQL queries, indexes, and KV store access patterns, reducing database load by approximately 20%.",
+        "Owned and maintained a core backend service responsible for tracking loan lifecycle events, settlements, and end-to-end process states, ensuring data consistency and operational visibility.",
+        "Built LLM-based automation for lender integration workflows, enabling automated flow documentation, code generation, and compilation."
+      ],
+      "tech_stack": [
+        "Haskell"
+      ],
+      "order_index": 1,
+      "created_at": "2026-03-12 18:09:44.774366+00"
+    },
+    {
+      "id": "78465178-02f0-49ce-91a5-b93b2175ab40",
+      "company": "ARCON Tech Solutions",
+      "role": "Software Developer Intern",
+      "start_date": "2023-06-01",
+      "end_date": "2023-08-01",
+      "description": [
+        "Implemented log statements at strategic points in the ARCON's PAM solution and created detailed flowcharts for some PAM programs.",
+        "Used the log4net library for debugging the C# code and the Miro software tool for designing flowcharts."
+      ],
+      "tech_stack": [
+        "C#"
+      ],
+      "order_index": 2,
+      "created_at": "2026-03-12 18:29:32.572632+00"
+    }
+  ],
+  "skills": [
+    {
+      "id": "cf8fbb69-f169-466f-a46a-339a77893657",
+      "name": "Haskell",
+      "category": "Backend Development",
+      "level": null,
+      "order_index": 1,
+      "created_at": "2026-03-12 18:24:28.654054+00"
+    },
+    {
+      "id": "cb38e08f-2771-4cba-b1e8-b1a10b8cb458",
+      "name": "Python",
+      "category": "Backend Development",
+      "level": null,
+      "order_index": 2,
+      "created_at": "2026-03-12 18:24:50.944867+00"
+    },
+    {
+      "id": "55bf4e23-8f4b-4b50-a2f7-2673c68024fa",
+      "name": "C++",
+      "category": "Backend Development",
+      "level": null,
+      "order_index": 3,
+      "created_at": "2026-03-12 18:25:05.587439+00"
+    },
+    {
+      "id": "9d420153-0fc4-41d5-9c10-d2f1e87f081a",
+      "name": "Node.js",
+      "category": "Backend Development",
+      "level": null,
+      "order_index": 4,
+      "created_at": "2026-03-12 18:25:16.209321+00"
+    },
+    {
+      "id": "3379cbad-bc8e-47c2-b9cb-2816b2118974",
+      "name": "HTML",
+      "category": "Web Development",
+      "level": null,
+      "order_index": 1,
+      "created_at": "2026-03-12 18:25:37.347057+00"
+    },
+    {
+      "id": "b0e25c28-a0fd-4add-b341-649b67cbdec4",
+      "name": "React.js",
+      "category": "Web Development",
+      "level": null,
+      "order_index": 2,
+      "created_at": "2026-03-12 18:25:51.015303+00"
+    },
+    {
+      "id": "40b03f49-4be6-4495-85a1-47d782fccc9f",
+      "name": "Next.js",
+      "category": "Web Development",
+      "level": null,
+      "order_index": 3,
+      "created_at": "2026-03-12 18:26:00.634042+00"
+    },
+    {
+      "id": "225f98c3-2911-4ba0-903b-b8b02d1c3f05",
+      "name": "Typescript",
+      "category": "Web Development",
+      "level": null,
+      "order_index": 4,
+      "created_at": "2026-03-12 18:26:27.918147+00"
+    },
+    {
+      "id": "2de5e996-3552-4e3f-9192-b3f7638986f9",
+      "name": "React Native",
+      "category": "Android Development",
+      "level": null,
+      "order_index": 1,
+      "created_at": "2026-03-12 18:26:51.015683+00"
+    },
+    {
+      "id": "541b0f17-28a8-4335-8d5d-6c6c3c7d98de",
+      "name": "SQL",
+      "category": "Database",
+      "level": null,
+      "order_index": 1,
+      "created_at": "2026-03-12 18:27:09.636806+00"
+    },
+    {
+      "id": "814274c3-b061-4f9b-9144-165c878de1ec",
+      "name": "PostgresDB",
+      "category": "Database",
+      "level": null,
+      "order_index": 2,
+      "created_at": "2026-03-12 18:27:26.016273+00"
+    },
+    {
+      "id": "c030a0a9-06ed-43e6-9e08-ed5a25f1b963",
+      "name": "MongoDB",
+      "category": "Database",
+      "level": null,
+      "order_index": 3,
+      "created_at": "2026-03-12 18:27:37.550698+00"
+    }
+  ]
+}

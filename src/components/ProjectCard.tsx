@@ -1,5 +1,4 @@
 import { Project } from '@/types/database'
-import Link from 'next/link'
 import { Github, ExternalLink } from 'lucide-react'
 
 interface ProjectCardProps {
@@ -8,9 +7,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white flex flex-col h-full">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-gray-800 flex flex-col h-full">
       {project.image_url && (
-        <div className="relative w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300">
+        <div className="relative w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600">
           <img
             src={project.image_url}
             alt={project.title}
@@ -20,11 +19,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       )}
 
       <div className="p-6 flex flex-col flex-1">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{project.title}</h3>
-        
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+
         {project.description && (
-          <ul className="text-gray-600 text-sm mb-4 space-y-1 list-disc list-inside flex-1">
-            {project.description.split('.').filter(point => point.trim()).map((point, index) => (
+          <ul className="text-gray-600 dark:text-gray-300 text-sm mb-4 space-y-1 list-disc list-inside flex-1">
+            {project.description.map((point, index) => (
               <li key={index}>{point.trim()}</li>
             ))}
           </ul>
@@ -36,7 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               {project.tech_stack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 text-xs rounded-full font-medium border border-blue-200"
+                  className="px-3 py-1 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 text-blue-700 dark:text-blue-300 text-xs rounded-full font-medium border border-blue-200 dark:border-gray-600"
                 >
                   {tech}
                 </span>
@@ -50,7 +49,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.github_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition font-medium"
+                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition font-medium"
               >
                 <Github size={18} />
                 <span className="text-sm">Code</span>
@@ -61,7 +60,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.live_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition font-medium"
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition font-medium"
               >
                 <ExternalLink size={18} />
                 <span className="text-sm">Live</span>

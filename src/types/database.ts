@@ -15,7 +15,7 @@ export interface Profile {
 export interface Project {
   id: string
   title: string
-  description: string
+  description: string[]
   tech_stack: string[] | null
   github_url: string | null
   live_url: string | null
@@ -31,7 +31,7 @@ export interface Experience {
   role: string
   start_date: string
   end_date: string | null
-  description: string | null
+  description: string[]
   tech_stack: string[] | null
   order_index: number
   created_at: string
