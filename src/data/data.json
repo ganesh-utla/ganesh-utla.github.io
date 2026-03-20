@@ -121,11 +121,11 @@
       "start_date": "2024-07-22",
       "end_date": null,
       "description": [
-        "Contributed to the Loan Marketplace platform, building backend services and REST APIs that enable seamless interaction between merchants and multiple lenders through standardized workflows.",
-        "Played a key role in developing the Credit Line Management system and Lender Gateway integrations, contributing to a revenue growth of nearly 35%.",
-        "Improved system performance and reliability by optimizing PostgreSQL queries, indexes, and KV store access patterns, reducing database load by approximately 20%.",
+        "Contributed to the Loan Marketplace platform and Credit Line Management system, building backend services and REST APIs and leading Lender Gateway integrations, contributing to a revenue growth of nearly 35%",
+        "Improved system performance and reliability by optimizing PostgreSQL queries, indexes, and KV store access patterns, reducing database load over 40%.",
         "Owned and maintained a core backend service responsible for tracking loan lifecycle events, settlements, and end-to-end process states, ensuring data consistency and operational visibility.",
-        "Built LLM-based automation for lender integration workflows, enabling automated flow documentation, code generation, and compilation."
+        "Built LLM-based automation for lender integration workflows, enabling automated flow documentation, code generation, and compilation.",
+        "Participated in Infosec audits, ensuring compliance with security and operational standards."
       ],
       "tech_stack": [
         "Haskell"
